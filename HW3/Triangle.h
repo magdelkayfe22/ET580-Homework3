@@ -13,14 +13,15 @@ public:
     Triangle(int b, int h);
 
     int getBase() const;
-    int getheight() const;
+    int getHeight() const;
 
     void setBase(int b);
     void setHeight(int h);
 
 
-    int area();
+    int area() const;
 
+    void print() const;
 
 };
 

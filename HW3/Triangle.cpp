@@ -1,61 +1,54 @@
 #include <iostream>
+#include "Triangle.h"
 using namespace std;
 
+//default constructor
+Triangle::Triangle() {
+    base = 2;
+    height = 1;
+}
 
-class Triangle {
+//Parameterized Constructor
+Triangle::Triangle(int b, int h) {
+    base = b;
+    height = h;
+}
 
-private:
+//Accessors
+int Triangle::getBase() const{
+    return base;
+}
 
-    int base;
-    int height;
-
-public:
-    //default constructor
-    Triangle(){
-        base = b;
-        height = h;
-    }
-
-    //Parameterized constructor 
-    Triangle(int b, int h) {
-        base = b;
-        height = h;
-    }
-
-    //Accessors
-    int getBase() const{
-        return base;
-    }
-
-    int getHeight() const {
-        return height;
-    }
-
-    void setBase(int b) const{
-        int base = b;
-    }
-
-    void setHeight(int h) {
-        int height = h;
-    }
-
-    double area() const {
-        return 0.5 * base * height;
-    }
+int Triangle::getHeight() const {
+    return height;
+}
 
 
-    void print() const {
-        cout << "Triangle with base = " << base;
-        cout << " and height = " << height;
-        cout << " has area = " << area() << endl;
-    }
+//mutators
+void Triangle::setBase(int b) const{
+    int base = b;
+}
 
-};
+void Triangle::setHeight(int h) {
+    int height = h;
+}
+
+//area function
+double Triangle::area() const {
+    return 0.5 * base * height;
+}
+
+
+void Triangle::print() const {
+    cout << "Triangle with base = " << base;
+    cout << " and height = " << height;
+    cout << " has area = " << area() << endl;
+}
 
 
 
 
-int main() {
+/*int main() {
 
     Triangle t1;
     t1.print();
@@ -70,3 +63,4 @@ int main() {
 
     return 0;
 }
+*/
