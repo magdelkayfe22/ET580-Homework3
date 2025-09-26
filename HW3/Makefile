@@ -9,14 +9,18 @@
 # use the up arrow and enter to rapidly update and run programs
 
 # executable file to create and its dependancies
-prog : driver.o Square.o
-	g++ -std=c++11 -o prog driver.o Square.o
+prog : driver.o Square.o Rectangle.o Triangle.o
+	g++ -std=c++11 -o prog driver.cpp Square.h Rectangle.h Triangle.h
 
 # file dependencies
-driver.o : Square.h
+driver.o : Driver.cpp Square.h Rectangle.h Triangle.h
 	g++ -std=c++11 -c driver.cpp
-Square.o : Square.h
+Square.o : Square.h Square.cpp
 	g++ -std=c++11 -c Square.cpp
+Rectangle.o : Rectangle.h Rectangle.cpp
+	g++ -std=c++11 -c Rectangle.cpp
+Triangle.o : Triangle.h Triangle.cpp
+	g++ -std=c++11 -c Triangle.cpp
 
 # remove all object and executable files
 clean:
