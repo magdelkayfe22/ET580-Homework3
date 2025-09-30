@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Triangle.h"
-using namespace std;
+using namespace std;    
 
 //default constructor
 Triangle::Triangle() {
