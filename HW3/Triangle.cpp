@@ -25,7 +25,7 @@ int Triangle::getHeight() const {
 
 
 //mutators
-void Triangle::setBase(int b) const{
+void Triangle::setBase(int b) {
     int base = b;
 }
 
@@ -34,7 +34,7 @@ void Triangle::setHeight(int h) {
 }
 
 //area function
-double Triangle::area() const {
+int Triangle::area()  {
     return 0.5 * base * height;
 }
 
